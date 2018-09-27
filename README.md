@@ -71,6 +71,12 @@ defaults delete com.apple.dt.Xcode IDEIndexEnable
 defaults write com.apple.dt.XCode IDEIndexDisable -bool YES
 ```
 
+### Show Indexing numeric progress
+
+```sh
+defaults write com.apple.dt.Xcode IDEIndexerActivityShowNumericProgress -bool YES
+```
+
 ### Show prebuild step logs
 
 ```sh
