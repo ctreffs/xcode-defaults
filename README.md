@@ -108,10 +108,34 @@ This enables running multiple Xcode versions for different projects.
 defaults write com.apple.dt.Xcode ApplePersistenceIgnoreState -bool YES
 ```
 
+### Some minimal additional logging 
+
+```sh
+defaults write com.apple.dt.XCBuild EnableDebugActivityLogs -bool YES
+```
+
+### Enable build debugging mode
+
+This slows down the build system & litters DerivedData/<project>/Build/Intermediates.noindex), generally should only be enabled when trying to capture a trace for incremental build debugging purposes.
+  
+```sh
+defaults write com.apple.dt.XCBuild EnableBuildDebugging -bool YES
+```
+
 ## Simulator
 
 ### Enable Simulator fullscreen mode
 
 ```sh
 defaults write com.apple.iphonesimulator AllowFullscreenMode -bool YES
+```
+
+## XCBuild
+
+### Enable Build Debugging 
+
+Creates an XCBuildData folder in `~/Library/Developer/Xcode/DerivedData/<your target>/Build/Intermediates.noindex/` which contains debugging info for xcodebuild.
+
+```sh
+defaults write com.apple.dt.XCBuild YES
 ```
