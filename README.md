@@ -77,6 +77,14 @@ defaults write com.apple.dt.XCode IDEIndexDisable -bool YES
 defaults write com.apple.dt.Xcode IDEIndexerActivityShowNumericProgress -bool YES
 ```
 
+### Show Indexing logging
+
+This will show you why a particular file is having trouble being compiled for indexing.
+
+```sh
+defaults write com.apple.dt.Xcode IDEIndexShowLog -bool YES
+```
+
 ### Show prebuild step logs
 
 ```sh
