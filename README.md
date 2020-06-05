@@ -61,14 +61,14 @@ defaults write com.apple.dt.Xcode IDEBuildOperationTimingLogLevel -int 3
 
 ```sh
 defaults delete com.apple.dt.Xcode IDEIndexDisable
-defaults write com.apple.dt.XCode IDEIndexEnable -bool YES
+defaults write com.apple.dt.Xcode IDEIndexEnable -bool YES
 ```
 
 ##### Disable indexing
 
 ```sh
 defaults delete com.apple.dt.Xcode IDEIndexEnable
-defaults write com.apple.dt.XCode IDEIndexDisable -bool YES
+defaults write com.apple.dt.Xcode IDEIndexDisable -bool YES
 ```
 
 ### Show Indexing numeric progress
