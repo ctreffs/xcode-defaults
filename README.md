@@ -49,12 +49,6 @@ defaults write com.apple.dt.Xcode PegasusMultipleCursorsEnabled -bool YES
 defaults write com.apple.dt.Xcode IDEBuildOperationMaxNumberOfConcurrentCompileTasks `sysctl -n hw.ncpu`
 ```
 
-### Enable extensive per operation timing logs
-
-```sh
-defaults write com.apple.dt.Xcode IDEBuildOperationTimingLogLevel -int 3
-```
-
 ### Enable/Disable indexing
 
 ##### Enable indexing
