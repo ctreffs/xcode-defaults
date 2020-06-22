@@ -95,6 +95,15 @@ May not work anymore.
 defaults write com.apple.dt.Xcode IDESourceKitServiceLogLevel -int 3 
 ```
 
+### Disable Main Thread Checker
+
+Deactivates the Main Thread Checker:
+
+```sh
+defaults write com.apple.dt.Xcode DVTDisableMainThreadChecker 1
+```
+Found in [Xcode 12 release notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12-beta-release-notes)
+
 ### Enable internal Xcode (debug) menu
 
 ```sh
