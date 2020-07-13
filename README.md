@@ -1,4 +1,6 @@
-## Xcode
+# Xcode defaults
+
+![Check Markdown links](https://github.com/ctreffs/xcode-defaults/workflows/Check%20Markdown%20links/badge.svg) [![License: CC BY-ND 4.0](https://img.shields.io/badge/License-CC%20BY--ND%204.0-green.svg)](https://creativecommons.org/licenses/by-nd/4.0/)
 
 #### Backup Xcode defaults
 
