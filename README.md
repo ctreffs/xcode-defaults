@@ -150,5 +150,5 @@ defaults write com.apple.iphonesimulator AllowFullscreenMode -bool YES
 Creates an XCBuildData folder in `~/Library/Developer/Xcode/DerivedData/<your target>/Build/Intermediates.noindex/` which contains debugging info for xcodebuild.
 
 ```sh
-defaults write com.apple.dt.XCBuild YES
+defaults write com.apple.dt.XCBuild -bool YES
 ```
