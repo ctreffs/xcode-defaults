@@ -99,12 +99,11 @@ defaults write com.apple.dt.Xcode IDESourceKitServiceLogLevel -int 3
 
 ### Disable Main Thread Checker
 
-Deactivates the Main Thread Checker:
+Deactivates the Main Thread Checker. Found in [Xcode 12 release notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12-beta-release-notes)
 
 ```sh
 defaults write com.apple.dt.Xcode DVTDisableMainThreadChecker 1
 ```
-Found in [Xcode 12 release notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12-beta-release-notes)
 
 ### Enable internal Xcode (debug) menu
 
@@ -135,7 +134,25 @@ This slows down the build system & litters DerivedData/<project>/Build/Intermedi
 defaults write com.apple.dt.XCBuild EnableBuildDebugging -bool YES
 ```
 
-## Simulator
+### Disable move files on restructure
+
+Do not move files when you restructure things in an Xcode project. Found by [@steinpete](https://twitter.com/steipete/status/1287057462454038528)
+
+```sh
+defaults write com.apple.dt.Xcode IDEDisableStructureEditingCoordinator -bool YES 
+```
+
+
+### Disable state restoration
+
+Stop Xcode from reopening files on launch. Found by [@SmileyKeith](https://twitter.com/SmileyKeith/status/759850753993375745)
+
+```sh
+defaults write com.apple.dt.Xcode IDEDisableStateRestoration -bool YES
+```
+
+
+## 📱 Simulator
 
 ### Enable Simulator fullscreen mode
 
@@ -143,7 +160,7 @@ defaults write com.apple.dt.XCBuild EnableBuildDebugging -bool YES
 defaults write com.apple.iphonesimulator AllowFullscreenMode -bool YES
 ```
 
-## XCBuild
+## 🏗️ XCBuild
 
 ### Enable Build Debugging 
 
@@ -152,3 +169,50 @@ Creates an XCBuildData folder in `~/Library/Developer/Xcode/DerivedData/<your ta
 ```sh
 defaults write com.apple.dt.XCBuild -bool YES
 ```
+
+
+## 🗑️ Xcode Cleanups
+
+
+### Remove all Xcode DerivedData
+
+... provided Xcode is set to default folder locations.
+This is a quick win and helps to get back gigabytes of storage space.
+Do this regularly.
+
+```sh
+rm -rdf ~/Library/Developer/Xcode/DerivedData/*
+```
+
+
+### Remove all Xcode DeveloperTools cache files
+
+... provided Xcode is set to default folder locations. 
+
+
+```sh
+CACHE=$(getconf DARWIN_USER_CACHE_DIR)
+rm -rdf ${CACHE}com.apple.DeveloperTools
+rm -rdf ${CACHE}org.llvm.clang.$(whoami)/ModuleCache
+rm -rdf ${CACHE}org.llvm.clang/ModuleCache
+rm -rdf ~/Library/Caches/com.apple.dt.*/*
+```
+
+#### Remove all Xcode / Swift temporary files. 
+
+```sh
+TMP=$(getconf DARWIN_USER_TEMP_DIR)
+rm -rdf ${TMP}*.swift
+rm -rdf ${TMP}ibtool*
+rm -rdf ${TMP}*IBTOOLD*
+rm -rdf ${TMP}supplementaryOutputs-*
+rm -rdf ${TMP}xcrun_db
+rm -rdf ${TMP}sources-*
+rm -rdf ${TMP}com.apple.dt.*
+rm -rdf ${TMP}com.apple.test.*
+```
+
+### Cleanup tools
+
+- [DevCleaner](https://github.com/vashpan/xcode-dev-cleaner) If you want to reclaim tens of gigabytes of your storage used for various Xcode caches - this tool is for you!
+
