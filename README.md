@@ -134,6 +134,15 @@ This slows down the build system & litters DerivedData/<project>/Build/Intermedi
 defaults write com.apple.dt.XCBuild EnableBuildDebugging -bool YES
 ```
 
+### Make Assistant aware of more companion files
+
+Make Xcode's Assistant aware of your ViewModels, Views, etc.
+Found by [@peterfriese](https://twitter.com/peterfriese/status/1364544309878534144)
+
+```sh
+defaults write com.apple.dt.Xcode IDEAdditionalCounterpartSuffixes -array-add "ViewModel" "View" "Screen"
+```
+
 ### Disable move files on restructure
 
 Do not move files when you restructure things in an Xcode project. Found by [@steinpete](https://twitter.com/steipete/status/1287057462454038528)
