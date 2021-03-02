@@ -99,7 +99,7 @@ defaults write com.apple.dt.Xcode IDESourceKitServiceLogLevel -int 3
 
 ### Disable Main Thread Checker
 
-Deactivates the Main Thread Checker. Found in [Xcode 12 release notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12-beta-release-notes)
+Deactivates the Main Thread Checker. Found in [Xcode 12 release notes](https://developer.apple.com/documentation/xcode-release-notes/)
 
 ```sh
 defaults write com.apple.dt.Xcode DVTDisableMainThreadChecker 1
