@@ -99,7 +99,7 @@ defaults write com.apple.dt.Xcode IDESourceKitServiceLogLevel -int 3
 
 ### Disable Main Thread Checker
 
-Deactivates the Main Thread Checker. Found in [Xcode 12 release notes](https://developer.apple.com/documentation/xcode-release-notes/xcode-12-beta-release-notes)
+Deactivates the Main Thread Checker. Found in [Xcode 12 release notes](https://developer.apple.com/documentation/xcode-release-notes/)
 
 ```sh
 defaults write com.apple.dt.Xcode DVTDisableMainThreadChecker 1
@@ -132,6 +132,15 @@ This slows down the build system & litters DerivedData/<project>/Build/Intermedi
   
 ```sh
 defaults write com.apple.dt.XCBuild EnableBuildDebugging -bool YES
+```
+
+### Make Assistant aware of more companion files
+
+Make Xcode's Assistant aware of your ViewModels, Views, etc.
+Found by [@peterfriese](https://twitter.com/peterfriese/status/1364544309878534144)
+
+```sh
+defaults write com.apple.dt.Xcode IDEAdditionalCounterpartSuffixes -array-add "ViewModel" "View" "Screen"
 ```
 
 ### Disable move files on restructure
