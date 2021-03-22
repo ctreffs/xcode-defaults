@@ -45,11 +45,21 @@ defaults write com.apple.dt.Xcode BuildSystemScheduleInherentlyParallelCommandsS
 defaults write com.apple.dt.Xcode PegasusMultipleCursorsEnabled -bool YES
 ```
 
-### Enable maximum number of concurrent compile tasks
+### Set maximum number of concurrent compile tasks
 
 ```sh
 defaults write com.apple.dt.Xcode IDEBuildOperationMaxNumberOfConcurrentCompileTasks `sysctl -n hw.ncpu`
 ```
+
+Where `sysctl -n hw.ncpu` gives you the number of CPU threads.
+
+### Set maximum number of parallel build subtasks
+
+```sh
+defaults write com.apple.dt.Xcode PBXNumberOfParallelBuildSubtasks `sysctl -n hw.ncpu`
+```
+
+Where `sysctl -n hw.ncpu` gives you the number of CPU threads.
 
 ### Enable/Disable indexing
 
