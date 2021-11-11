@@ -170,6 +170,17 @@ Stop Xcode from reopening files on launch. Found by [@SmileyKeith](https://twitt
 defaults write com.apple.dt.Xcode IDEDisableStateRestoration -bool YES
 ```
 
+### Homebrew prefix path
+
+[Homebrew's](https://brew.sh) default [prefix/install path](https://docs.brew.sh/Manpage#--prefix---unbrewed---installed-formula-) can point to different locations depending on your system.   
+Xcode by default only looks for `/opt/brew` and `/usr/local`.   
+You can adjust that location by writing the following default.  
+To get your Homebrew prefix call `brew --prefix`.
+Source [@NeoNacho](https://twitter.com/NeoNacho/status/1412514541343166467?s=20)
+
+```sh
+defaults write com.apple.dt.Xcode IDEHomebrewPrefixPath -string <BREW_PREFIX>
+```
 
 ## 📱 Simulator
 
