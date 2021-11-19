@@ -181,6 +181,16 @@ Source [@NeoNacho](https://twitter.com/NeoNacho/status/1412514541343166467?s=20)
 ```sh
 defaults write com.apple.dt.Xcode IDEHomebrewPrefixPath -string <BREW_PREFIX>
 ```
+  
+### Swift package remote source path
+
+Specify the directory to which remote source packages are fetch or expected to be found.
+`xcodebuild` has the same option as `clonedSourcePackagesDirPath`.
+Source [@bguidolim](https://twitter.com/bguidolim/status/1249418542111432711)
+
+```sh
+defaults write com.apple.dt.Xcode IDEClonedSourcePackagesDirPathOverride -string <PATH>
+```
 
 ## 📱 Simulator
 
