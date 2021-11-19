@@ -107,6 +107,13 @@ May not work anymore.
 defaults write com.apple.dt.Xcode IDESourceKitServiceLogLevel -int 3 
 ```
 
+Also you can do this temporarily by pre-pending this environment variable when starting Xcode:
+
+```sh
+SOURCEKIT_LOGGING=3 /Applications/Xcode.app/Contents/MacOS/Xcode
+```
+Source [AppCode under the hood - Aydar Mukhametzyanov - NSSpain 2021](https://vimeo.com/479319821#t=1070s)
+
 ### Disable Main Thread Checker
 
 Deactivates the Main Thread Checker. Found in [Xcode 12 release notes](https://developer.apple.com/documentation/xcode-release-notes/)
