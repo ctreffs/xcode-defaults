@@ -18,6 +18,16 @@ mv ~/Library/Preferences/com.apple.dt.Xcode.plist ~/Desktop/XcodeDefaults.plist
 open -b com.apple.dt.Xcode
 ```
 
+### New Swift build system mode
+
+With [Xcode 13 Beta 2](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_2-release-notes) the build system and Swift compiler have a new mode that better utilizes available cores, resulting in faster builds for Swift projects. The mode is opt-in, and you can enable globally with the following user default:
+
+```sh
+defaults write com.apple.dt.XCBuild EnableSwiftBuildSystemIntegration 1
+```
+
+Source [@BenchR](https://twitter.com/BenchR/status/1460699068846456832)
+
 ### Enable project build time
 
 ```sh
