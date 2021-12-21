@@ -269,7 +269,8 @@ rm -rdf ${TMP}com.apple.dt.*
 rm -rdf ${TMP}com.apple.test.*
 ```
 
-### Cleanup tools
-
+## 🧰 Tools
+  
 - [DevCleaner](https://github.com/vashpan/xcode-dev-cleaner) If you want to reclaim tens of gigabytes of your storage used for various Xcode caches - this tool is for you!
+- [Kintsugi](https://github.com/Lightricks/Kintsugi) A tool to automatically resolve Git conflicts that occur in Xcode project files
 
