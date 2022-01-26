@@ -273,4 +273,6 @@ rm -rdf ${TMP}com.apple.test.*
   
 - [DevCleaner](https://github.com/vashpan/xcode-dev-cleaner) If you want to reclaim tens of gigabytes of your storage used for various Xcode caches - this tool is for you!
 - [Kintsugi](https://github.com/Lightricks/Kintsugi) A tool to automatically resolve Git conflicts that occur in Xcode project files
-
+- [BuildTimeAnalyzer](https://github.com/RobertGummesson/BuildTimeAnalyzer-for-Xcode) A build time analyzer for Xcode
+- [XCLogParser](https://github.com/MobileNativeFoundation/XCLogParser) A tool to parse Xcode and xcodebuild logs stored in the xcactivitylog format
+- [XCMetrics](https://github.com/spotify/XCMetrics) A tool to collect Xcode build metrics and improve developer productivity
