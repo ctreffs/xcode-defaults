@@ -20,7 +20,7 @@ open -b com.apple.dt.Xcode
 
 ### New Swift build system mode
 
-With [Xcode 13 Beta 2](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_2-release-notes) the build system and Swift compiler have a new mode that better utilizes available cores, resulting in faster builds for Swift projects. The mode is opt-in, and you can enable globally with the following user default:
+With [Xcode 13.3](https://developer.apple.com/documentation/xcode-release-notes/xcode-13_3-release-notes) the build system and Swift compiler have a new mode that better utilizes available cores, resulting in faster builds for Swift projects. The mode is opt-in, and you can enable globally with the following user default:
 
 ```sh
 defaults write com.apple.dt.XCBuild EnableSwiftBuildSystemIntegration 1
