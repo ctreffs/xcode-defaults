@@ -73,6 +73,8 @@ Where `sysctl -n hw.ncpu` gives you the number of CPU threads.
 
 ### Enable/Disable indexing
 
+Keep in mind that disabling indexing will disable `refactor` code action so you probably won't be able to generate protocol conformances or memberwise initializers
+
 ##### Enable indexing
 
 ```sh
