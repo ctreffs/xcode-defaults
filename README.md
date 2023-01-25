@@ -241,6 +241,7 @@ Do this regularly.
 
 ```sh
 rm -rdf ~/Library/Developer/Xcode/DerivedData/*
+rm -rf $(defaults read com.apple.dt.Xcode.plist IDECustomDerivedDataLocation)
 ```
 
 
