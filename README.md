@@ -26,7 +26,7 @@ With [Xcode 13.3](https://developer.apple.com/documentation/xcode-release-notes/
 defaults write com.apple.dt.XCBuild EnableSwiftBuildSystemIntegration 1
 ```
 
-Source [@BenchR](https://twitter.com/BenchR/status/1460699068846456832)
+Source [@BenchR](https://x.com/BenchR/status/1460699068846456832)
 
 ### Enable project build time
 
@@ -166,7 +166,7 @@ defaults write com.apple.dt.XCBuild EnableBuildDebugging -bool YES
 ### Make Assistant aware of more companion files
 
 Make Xcode's Assistant aware of your ViewModels, Views, etc.
-Found by [@peterfriese](https://twitter.com/peterfriese/status/1364544309878534144)
+Found by [@peterfriese](https://x.com/peterfriese/status/1364544309878534144)
 
 ```sh
 defaults write com.apple.dt.Xcode IDEAdditionalCounterpartSuffixes -array-add "ViewModel" "View" "Screen"
@@ -174,7 +174,7 @@ defaults write com.apple.dt.Xcode IDEAdditionalCounterpartSuffixes -array-add "V
 
 ### Disable move files on restructure
 
-Do not move files when you restructure things in an Xcode project. Found by [@steinpete](https://twitter.com/steipete/status/1287057462454038528)
+Do not move files when you restructure things in an Xcode project. Found by [@steinpete](https://x.com/steipete/status/1287057462454038528)
 
 ```sh
 defaults write com.apple.dt.Xcode IDEDisableStructureEditingCoordinator -bool YES 
@@ -183,7 +183,7 @@ defaults write com.apple.dt.Xcode IDEDisableStructureEditingCoordinator -bool YE
 
 ### Disable state restoration
 
-Stop Xcode from reopening files on launch. Found by [@SmileyKeith](https://twitter.com/SmileyKeith/status/759850753993375745)
+Stop Xcode from reopening files on launch. Found by [@SmileyKeith](https://x.com/SmileyKeith/status/759850753993375745)
 
 ```sh
 defaults write com.apple.dt.Xcode IDEDisableStateRestoration -bool YES
@@ -195,7 +195,7 @@ defaults write com.apple.dt.Xcode IDEDisableStateRestoration -bool YES
 Xcode by default only looks for `/opt/brew` and `/usr/local`.   
 You can adjust that location by writing the following default.  
 To get your Homebrew prefix call `brew --prefix`.
-Source [@NeoNacho](https://twitter.com/NeoNacho/status/1412514541343166467?s=20)
+Source [@NeoNacho](https://x.com/NeoNacho/status/1412514541343166467?s=20)
 
 ```sh
 defaults write com.apple.dt.Xcode IDEHomebrewPrefixPath -string <BREW_PREFIX>
@@ -205,7 +205,7 @@ defaults write com.apple.dt.Xcode IDEHomebrewPrefixPath -string <BREW_PREFIX>
 
 Specify the directory to which remote source packages are fetch or expected to be found.
 `xcodebuild` has the same option as `clonedSourcePackagesDirPath`.
-Source [@bguidolim](https://twitter.com/bguidolim/status/1249418542111432711)
+Source [@bguidolim](https://x.com/bguidolim/status/1249418542111432711)
 
 ```sh
 defaults write com.apple.dt.Xcode IDEClonedSourcePackagesDirPathOverride -string <PATH>
