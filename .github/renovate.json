@@ -1,0 +1,50 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "labels": [
+    "dependencies"
+  ],
+  "packageRules": [
+    {
+      "description": "Group all Swift package minor and patch updates together",
+      "groupName": "Swift non-major dependencies",
+      "matchManagers": [
+        "swift"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ]
+    },
+    {
+      "description": "Group all Mint package minor and patch updates together",
+      "groupName": "Mint non-major dependencies",
+      "matchManagers": [
+        "mint"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ]
+    },
+    {
+      "description": "Group and automerge non-major GitHub Actions updates",
+      "groupName": "GitHub Actions non-major dependencies",
+      "matchManagers": [
+        "github-actions"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "automerge": true
+    }
+  ],
+  "suppressNotifications": [
+    "prIgnoreNotification",
+    "prEditedNotification",
+    "branchAutomergeFailure"
+  ]
+}
